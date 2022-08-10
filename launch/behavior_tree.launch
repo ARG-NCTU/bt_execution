@@ -1,7 +1,9 @@
 <launch>
 
+  <arg name="tree" default="robotx_drone.tree"/>
+
   <node name="behavior_tree" pkg="behavior_tree" type="behavior_tree_node.py">
-    <param name="config" type="string" value="$(find behavior_tree)/config/robotx_drone.tree" />
+    <param name="config" type="string" value="$(find behavior_tree)/config/$(arg tree)" />
     <param name="only_publish_on_change" type="bool" value="false" />
   </node>
 
