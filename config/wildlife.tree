@@ -1,0 +1,18 @@
+?
+	->
+		(finish turtle)
+		(finish platypus)
+	->
+		?
+			(running task)
+			->
+				?
+					(zed find object)
+					[pattern block nav]
+				?
+					(hsi find object)
+					[wamv alignment nav]
+		?
+			(is crocodile)
+			(finish task)
+			[task nav]
