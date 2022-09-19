@@ -1,10 +1,10 @@
 ->
 	?
 		(reach desired distance)
-		[task nav]
+		[wamv goal nav]
 	?
 		(in desired angle)
-		[wamv alignment nav]
+		[wamv angle nav]
 	?
 		(scan finished)
 		[scan the code]

@@ -334,7 +334,7 @@
               "keys": {
                 "config_filename": {
                   "type": "repr",
-                  "repr": "u'/home/argrobotx/robotx-2022/catkin_ws/src/behavior_tree/config/wildlife.tree'"
+                  "repr": "u'/home/argrobotx/robotx-2022/catkin_ws/src/behavior_tree/config/example.tree'"
                 }
               },
               "groups": {}
