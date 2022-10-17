@@ -1,0 +1,12 @@
+?
+	(flings finished)
+	->
+		?
+			(nav_fire_range_finished)
+			[nav_fire_range]
+		?
+			(in desired angle)
+			[wamv alignment nav]
+		?
+			(flings finished)
+			[flings]

@@ -1,0 +1,25 @@
+?
+	(landing_finished)
+	->
+		?
+			(takeoff_finished)
+			[takeoff]
+		?
+			(find_2_objects)
+			->
+				?
+					(touch_boundary)
+					->
+						?
+							<!>
+								(explore_rotate_finished)
+							[explore_rotate_reset]
+						[explore_foward]
+				?
+					(explore_rotate_finished)
+					[explore_rotate]
+		->
+			?
+				(waypoint_home_finished)
+				[waypoint_home]
+			[landing]
