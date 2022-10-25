@@ -1,0 +1,42 @@
+?
+	<!>
+		(software lock)
+	->
+		?
+			<!>
+				(enable land)
+			?
+				(landed)
+				[land]
+		?
+			(enable land)
+			->
+				?
+					(is armed)
+					[arm]
+				?
+					(disable_manual)
+					[waypoint_following]
+				?
+					->
+						(explore_circular_finished)
+						(explore_forward_finished)
+					->
+						?
+							(explore_circular_finished)
+							[explore_circular]
+						?
+							(explore_forward_finished)
+							[explore_forward]
+						?
+							<!>
+								(disable_manual)
+							->
+								?
+									<!>
+										(explore_forward_finished)
+									[explore_forward_reset]
+								?
+									<!>
+										(explore_circular_finished)
+									[explore_circular_reset]
