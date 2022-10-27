@@ -1,32 +1,12 @@
-->
-	?
-		(find_beacon)
-		->
-			?
-				(nav_gate_1_finished)
-				->
-					?
-						<!>
-							(nav_gate_2_finished)
-						[nav_gate_2_reset]
-					?
-						<!>
-							(nav_gate_3_finished)
-						[nav_gate_3_reset]
-					[nav_gate_1]
-			?
-				(nav_gate_2_finished)
-				[nav_gate_2]
-			?
-				(nav_gate_3_finished)
-				[nav_gate_3]
-			?
-				(find_beacon)
-				[nav_gate_1_reset]
+?
+	(beacon_finished)
 	->
+		?
+			(nav_to_gate_finished)
+			[nav_to_gate]
 		?
 			(nav_circular_finished)
 			[nav_circular]
-	?
-		(nav_return_finished)
-		[nav_return]
+		?
+			(beacon_finished)
+			[nav_return]
