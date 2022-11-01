@@ -2,6 +2,7 @@
 	->
 		(finish turtle)
 		(finish platypus)
+		(finish crocodile)
 	->
 		?
 			(running task)
@@ -10,9 +11,11 @@
 					(zed find object)
 					[pattern block nav]
 				?
+					(reach wildlife goal)
+					[nav to wildlife]
+				?
 					(hsi find object)
 					[wamv alignment nav]
 		?
-			(is crocodile)
 			(finish task)
 			[task nav]
