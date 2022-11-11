@@ -1,0 +1,21 @@
+->
+	?
+		(state_offboard)
+		->
+			?
+				(state_land)
+				[action_land]
+			(halt)
+	->
+		?
+			(is armed)
+			[arm]
+		?
+			(waypoint_takeoff_finished)
+			[waypoint_takeoff]
+		?
+			(reach_landing_pose)
+			[landing_tag]
+		?
+			(state_land)
+			[action_land]
