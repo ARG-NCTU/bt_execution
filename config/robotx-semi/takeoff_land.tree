@@ -1,0 +1,18 @@
+?
+    (takeoff_land_finished)
+    ->
+        ?
+            (state_offboard)
+            [action_offboard]
+        ?
+            (state_arm)
+            [action_arm]
+        ?
+            (waypoint_takeoff_finished)
+            [waypoint_takeoff]
+        ?
+            (state_tag_land)
+            [landing_tag]
+        ?
+            (state_land)
+            [action_land]

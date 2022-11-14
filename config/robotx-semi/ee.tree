@@ -1,0 +1,7 @@
+->
+	?
+		(nav_ee_finished)
+		[nav_ee]
+	?
+		(nav_perception_gate_finished)
+		[nav_perception_gate]
