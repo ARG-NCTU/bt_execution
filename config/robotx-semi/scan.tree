@@ -1,16 +1,21 @@
-->
-	?
-		(nav_scan_finished)
-		[nav_scan]
-	?
-		(scan_the_code_finished)
-		->
-			?
-				(nav_perception_scan_finished)
-				[nav_perception_scan]
-			?
-				(alignment_success)
-				[alignment]
-			?
-				(scan_the_code_finished)
-				[scan_the_code]
+?
+	(scan_finished)
+	->
+		?
+			(nav_scan_finished)
+			[nav_scan]
+		?
+			(alignment_scan_finished)
+			[alignment_scan]
+		?
+			(scan_the_code_finished)
+			->
+				?
+					(nav_perception_scan_finished)
+					[nav_perception_scan]
+				?
+					(alignment_scansuccess)
+					[alignment_scan]
+				?
+					(scan_finished)
+					[scan]

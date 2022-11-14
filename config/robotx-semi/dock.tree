@@ -1,7 +1,18 @@
-->
-	?
-		(nav_dock_finished)
-		[nav_dock]
-	?
-		(docking_finished)
-		[docking]
+?
+	(docking_finished)
+	->
+		?
+			(nav_dock_finished)
+			[nav_dock]
+		?
+			(alignment_dock_finished)
+			[alignment_dock]
+		?
+			(docking_finished)
+			->
+				?
+					(detect_dock)
+					[rotate]
+				?
+					(docking_finished)
+					[docking]

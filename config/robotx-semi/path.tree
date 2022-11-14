@@ -1,51 +1,12 @@
 ?
-	(arrived_endpoint)
+	(nav_path_end_finished)
 	->
 		?
-			(init manual)
-			->
-				[pair_eval_reset]
-				[explore_forward_reset]
-				[explore_circular_reset]
-				[waypoint_following_perception_reset]
+			(nav_path_finished)
+			[nav_path]
 		?
-			(disable_manual)
-			[waypoint_following]
+			(alignment_path_finished)
+			[alignment_path]
 		?
-			->
-				(pair_eval_finished)
-				(explore_circular_finished)
-			->
-				?
-					(pair_eval_finished)
-					->
-						?
-							<!>
-								(explore_circular_finished)
-							[explore_circular_reset]
-						?
-							<!>
-								(waypoint_following_perception_finished)
-							[waypoint_following_perception_reset]
-						?
-							<!>
-								(explore_forward_finished)
-							[explore_forward_reset]
-						[pair_eval]
-				?
-					(explore_circular_finished)
-					[explore_circular]
-		?
-			?
-				<!>
-					(find_pair)
-				?
-					(waypoint_following_perception_finished)
-					[waypoint_following_perception]
-		?
-			(explore_forward_finished)
-			[explore_forward]
-		?
-			<!>
-				(pair_eval_finished)
-			[pair_eval_reset]
+			(nav_path_end_finished)
+			[nav_path_end]

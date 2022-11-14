@@ -8,6 +8,16 @@
 			(halt)
 	->
 		?
+			<!>
+				(state_power)
+			[action_hold]
+		(halt)
+	?
+		<!>
+			(manual force land)
+		[action_land]
+	->
+		?
 			(is armed)
 			[arm]
 		?

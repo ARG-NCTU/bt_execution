@@ -1,7 +1,18 @@
-->
-	?
-		(nav_ee_finished)
-		[nav_ee]
-	?
-		(nav_perception_gate_finished)
-		[nav_perception_gate]
+?
+	(nav_perception_gate_finished)
+	->
+		?
+			(nav_ee_finished)
+			[nav_ee]
+		?
+			(alignment_ee_finished)
+			[alignment_ee]
+		?
+			(nav_perception_gate_finished)
+			->
+				?
+					(detect_gate)
+					[rotate]
+				?
+					(nav_perception_gate_finished)
+					[nav_perception_gate]
