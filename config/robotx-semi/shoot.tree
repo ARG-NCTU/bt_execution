@@ -1,11 +1,16 @@
-->
-	?
-		(nav_fling_finished)
-		[nav_fling]
-	?
-		(flings_finished)
-		->
-			?
-				(nav_perception_fling_finished)
-				[nav_perception_fling]
+?
+	(flings_finished)
+	->
+		?
+			(nav_fling_finished)
+			[nav_fling]
+		?
+			(alignment_fling_finished)
+			[alignment_fling]
+		?
 			(flings_finished)
+			->
+				?
+					(nav_perception_fling_finished)
+					[nav_perception_fling]
+				(flings_finished)

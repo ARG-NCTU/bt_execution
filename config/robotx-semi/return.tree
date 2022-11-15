@@ -1,10 +1,9 @@
-->
-	?
-		(nav_gate_finished)
-		[nav_gate]
-	?
-		(nav_perception_gate_finished)
-		[nav_perception_gate]
-	?
-		(nav_return_finished)
-		[nav_return]
+?
+	(nav_return_finished)
+	->
+		?
+			(nav_gate_finished)
+			[nav_gate]
+		?
+			(nav_return_finished)
+			[nav_return]

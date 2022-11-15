@@ -1,0 +1,21 @@
+?
+	->
+		(finish_turtle)
+		(finish_platypus)
+		(finish_crocodile)
+	->
+		?
+			(running_task)
+			->
+				?
+					(zed find object)
+					[pattern block nav]
+				?
+					(reach wildlife goal)
+					[nav to wildlife]
+				?
+					(hsi find object)
+					[wamv alignment nav]
+		?
+			(finish task)
+			[task nav]
