@@ -6,26 +6,16 @@
 				(nav_ee_finished)
 				[nav_ee]
 			?
-				(alignment_ee_finished)
-				[alignment_ee]
-			?
 				(nav_perception_gate_finished)
-				->
-					?
-						(detect_gate)
-						[rotate]
-					?
-						(nav_perception_gate_finished)
-						[nav_perception_gate]
+				?
+					(nav_perception_gate_finished)
+					[nav_perception_gate]
 	?
 		(scan_finished)
 		->
 			?
 				(nav_scan_finished)
 				[nav_scan]
-			?
-				(alignment_scan_finished)
-				[alignment_scan]
 			?
 				(scan_finished)
 				->
@@ -39,6 +29,21 @@
 						(scan_finished)
 						[scan]
 	?
+		(docking_finished)
+		->
+			?
+				(nav_dock_finished)
+				[nav_dock]
+			?
+				(alignment_dock_finished)
+				[alignment_dock]
+			?
+				(docking_finished)
+				->
+					?
+						(docking_finished)
+						[docking]
+	?
 		(nav_path_end_finished)
 		->
 			?
@@ -47,6 +52,11 @@
 			?
 				(alignment_path_finished)
 				[alignment_path]
+			?
+				(find_exit)
+				?
+					(nav_follow)
+					[nav_follow]
 			?
 				(nav_path_end_finished)
 				[nav_path_end]
