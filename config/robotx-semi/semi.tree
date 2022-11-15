@@ -6,6 +6,9 @@
 				(nav_ee_finished)
 				[nav_ee]
 			?
+				(alignment_ee_finished)
+				[alignment_ee]
+			?
 				(nav_perception_gate_finished)
 				?
 					(nav_perception_gate_finished)
@@ -16,6 +19,9 @@
 			?
 				(nav_scan_finished)
 				[nav_scan]
+			?
+				(alignment_scan_finished)
+				[alignment_scan]
 			?
 				(scan_finished)
 				->
@@ -43,6 +49,9 @@
 					?
 						(docking_finished)
 						[docking]
+	?
+		(docking_backward_finished)
+		[docking_backward]
 	?
 		(nav_path_end_finished)
 		->
@@ -101,23 +110,23 @@
 						[alignment_perception_fling]
 					(flings_finished)
 	?
-	    (takeoff_land_finished)
-	    ->
-	        ?
-	            (state_offboard)
-	            [action_offboard]
-	        ?
-	            (state_arm)
-	            [action_arm]
-	        ?
-	            (waypoint_takeoff_finished)
-	            [waypoint_takeoff]
-	        ?
-	            (state_tag_land)
-	            [landing_tag]
-	        ?
-	            (state_land)
-	            [action_land]
+		(takeoff_land_finished)
+		->
+			?
+				(state_offboard)
+				[action_offboard]
+			?
+				(state_arm)
+				[action_arm]
+			?
+				(waypoint_takeoff_finished)
+				[waypoint_takeoff]
+			?
+				(state_tag_land)
+				[landing_tag]
+			?
+				(state_land)
+				[action_land]
 	?
 		(nav_return_finished)
 		->
