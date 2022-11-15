@@ -1,0 +1,18 @@
+?
+	<!>
+		(state_offboard)
+	->
+		?
+			<!>
+				(state_power)
+			[action_hold]
+		->
+			?
+				(state_arm)
+				[action_arm]
+			?
+				(waypoint_takeoff_finished)
+				[waypoint_takeoff]
+			?
+				(state_land)
+				[action_land]
