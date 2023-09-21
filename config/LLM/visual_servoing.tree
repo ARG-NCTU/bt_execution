@@ -1,0 +1,10 @@
+->
+	->
+		(object_in_view)
+		->
+			?
+				(linear_y_in_margin)
+				[linear_y_control]
+			?
+				(linear_z_in_margin)
+				[linear_z_control]

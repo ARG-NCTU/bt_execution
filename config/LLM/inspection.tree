@@ -1,0 +1,17 @@
+->
+	->
+		?
+			(explore_forward_finished)
+			[explore_forward]
+		?
+			(rotate_right_finished)
+			[rotate_right]
+		?
+			(rotate_left_finished)
+			[rotate_left]
+		?
+			(explore_left_and_right_finished)
+			[explore_left_and_right]
+		?
+			(explore_pattern_block_finished)
+			[explore_pattern_block]
