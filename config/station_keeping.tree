@@ -1,0 +1,7 @@
+->
+	?
+		(in_inner_finished)
+		[station_keeping]
+	?
+		(in_outter)
+		[reset_station_keeping]
