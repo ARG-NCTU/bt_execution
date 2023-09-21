@@ -39,8 +39,30 @@ def timer_callback(event):
     cv2.waitKey(1)
     '''
 
+def wait_for_rosparam(param_name):
+    # Set the name of the rosparam to wait for
+    rosparam_name = param_name
+    # Wait for the rosparam to be set to True
+    while not rospy.get_param(rosparam_name, False):
+        rospy.loginfo("wait_for_generation=True, waiting '%s' to be True...", rosparam_name)
+        rospy.sleep(1.0)
+
+    rospy.loginfo("wait_for_generation=True, and '%s' is True. Starting...", rosparam_name)
+
 if __name__ == '__main__':
     rospy.init_node('behavior_tree_node')
+
+    wait_for_generation = rospy.get_param('~wait_for_generation', False)
+
+    trigger_rosparam = rospy.get_param('~trigger_rosparam', '')
+
+    if wait_for_generation:
+        try:
+            wait_for_rosparam(trigger_rosparam)
+        except rospy.ROSInterruptException:
+            pass
+    else:
+        rospy.loginfo("wait_for_generation=False, starting...")
     
     config_filename = rospy.get_param('~config', '')
     only_publish_on_change = rospy.get_param('~only_publish_on_change', False)
