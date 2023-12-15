@@ -1,0 +1,16 @@
+->
+	->
+		(object_in_view)
+		|| 4
+			?
+				(linear_x_in_margin)
+				[linear_x_control]
+			?
+				(linear_y_in_margin)
+				[linear_y_control]
+			?
+				(linear_z_in_margin)
+				[linear_z_control]
+			?
+				(angular_z_in_margin)
+				[angular_z_control]
