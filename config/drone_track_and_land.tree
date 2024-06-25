@@ -1,0 +1,9 @@
+->
+	(enable_auto_mode)
+	?
+		->
+			(ready_to_track)
+			[track_wamv_range]
+		|| 2
+			[wamv_move_circle]
+			[land_wamv_range]
