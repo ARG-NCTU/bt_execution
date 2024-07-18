@@ -1,10 +1,10 @@
 <launch>
 
-  <arg name="tree" default="scan_the_code.tree"/>
-
+  <arg name="tree" default="test.tree"/>
+  <arg name="wait_for_generation" default="false"/>
   <node name="behavior_tree" pkg="behavior_tree" type="behavior_tree_node.py" output="screen">
     <!-- A special param, define whether behavior need to wait tree config provided by LLM-generation... -->
-    <param name="wait_for_generation" type="bool" value="true" />
+    <param name="wait_for_generation" type="bool" value="$(arg wait_for_generation)"/>
     
     <!-- This param define the name of a specified rosparam to trigger behavior tree node if param <wait_for_generation> is True -->
     <param name="trigger_rosparam" type="string" value='/LLM_generation_finished' />
