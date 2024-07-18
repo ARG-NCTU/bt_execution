@@ -1,0 +1,20 @@
+?
+	->
+		(enable_auto_mode)
+		(collision_prevention)
+		?
+			(Find_target_object)
+			?
+				(explore_pattern_block_finished)
+				[explore_pattern_block]
+		?
+			(object_in_grasp_distance)
+			[approach_target]
+		?
+			(object_in_hand)
+			[human_operator_picking]
+		?
+			(return_finished)
+			[return]
+	->
+		[Ask_for_human_help]
