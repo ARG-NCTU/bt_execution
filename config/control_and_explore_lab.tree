@@ -1,0 +1,5 @@
+->
+	(enable_auto_mode)
+	?
+		(explore_pattern_block_finished)
+		[explore_pattern_block]
