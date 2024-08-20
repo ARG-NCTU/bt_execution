@@ -1,0 +1,27 @@
+?
+	->
+		(enable_auto_mode)
+		(collision_prevention)
+		?
+			(Find_target_object)
+			->
+				?
+					(rotate_right_is_finished)
+					[rotate_right]
+				?
+					(explore_forward_is_finished)
+					[explore_forward]
+				?
+					(rotate_left_is_finished)
+					[rotate_left]
+		?
+			(object_in_grasp_distance)
+			[approach_target]
+		?
+			(object_in_hand)
+			[human_operator_picking]
+		?
+			(return_finished)
+			[return]
+	->
+		[Ask_for_human_help]
