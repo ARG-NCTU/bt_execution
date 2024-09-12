@@ -1,0 +1,5 @@
+->    
+	(reach_start_point)
+	?
+		(check_the_height)
+		[move_up]
